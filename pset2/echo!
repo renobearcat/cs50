@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <string.h>
+
+int i = 1; // initalize on 2nd commandline argument
+int main(int argc, string argv[])
+{
+    if(argc < 2) //return error message if no 2nd argument
+       {
+          printf("Fail.\n");
+          return 1;
+       }
+    printf("%s ", argv[i]); //print the string that was obtained
+    printf("\n");
+     return 0;
+}
