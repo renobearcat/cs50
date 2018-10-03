@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <string.h>
+#include <ctype.h>
+
+// caesar.c by Erik Koland
+// encrypts text based on a single command line argument that contains a numerical value
+
+int main(int argc, string argv[])
+{
+    int characters = 0;
+
+    if (argc != 2)  // ensure only one command line argument
+    {
+        printf("Invalid entry.");
+        return 1;
+    }
+
+    else // if valid, take the single command line argument
+    {
+        int k = atoi(argv[1]); // ensures command line delivers an integer of some fashion, returns 0 if no number given
+        printf("plaintext:");
+        string ptext = get_string();
+        characters = strlen(ptext);
+        int a = 97;
+        int A = 65;
+        printf("ciphertext:");
+        for (int i = 0; i < characters; i++) //process characters in string one by one
+        {
+
+            if (islower(ptext[i])) //handles lower case
+            {
+                printf("%c", (ptext[i] - a + k) % 26 + a); // modifies text based on numerical value of k
+            }
+            else if (isupper(ptext[i])) //handles upper case
+            {
+                printf("%c", (ptext[i] - A + k) % 26 + A); //modifies text based on numerical value of k
+            }
+            else
+            {
+                printf("%c", ptext[i]); //reprint entry if not upper or lower
+            }
+        }
+        printf("\n");
+        return 0;
+    }
+}
