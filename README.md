@@ -11,9 +11,7 @@ Website
 https://cs50.edx.org/
 
 
-<h3>Erik's Problem Sets</h3>
-Here's what he did.
-
+<h3>Erik's Problem Sets</h3><br />
 
 Week 0<br /> Scratch 
 
