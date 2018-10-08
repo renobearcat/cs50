@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+
+// greedy.c by Erik Koland. Returns the fewest coins needed to pay out a cash amount when no dollars are available.
+int main(void)
+{
+    float change;
+    printf("Let's get greedy.\n");
+    //prompt user to enter a non-negative number
+    do
+    {
+        change = get_float("How much change is due customer?: ");
+    }
+    while (change < 0);
+
+    //convert dollars into cents, rounded.
+    int cents = roundf(change * 100);
+    int coins = 0;
+
+    while (cents > 0)
+        //start with quarters
+        if (cents >= 25)
+        {
+            //subract 25 from cents, raise coin by 1
+            cents -= 25;
+            coins++;
+        }
+    // move onto dimes
+        else if (cents >= 10)
+        {
+            //subract 10 from cents, raise coin by 1
+            cents -= 10;
+            coins++;
+        }
+    // move onto nickels
+        else if (cents >= 5)
+        {
+            //subract 5 from cents, raise coin by 1
+            cents -= 5;
+            coins++;
+        }
+    // finish with pennies
+        else if (cents >= 1)
+        {
+            //subract 1 from cents, raise coin by 1
+            cents -= 1;
+            coins++;
+        }
+    printf("Fewest # of coins: %i\n", coins);
+}
