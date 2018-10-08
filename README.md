@@ -21,9 +21,9 @@ Week 0
 
 Scratch
 
-Week 1 (<a href=https://github.com/renobearcat/cs50/tree/master/pset1>pset1</a>,<a href=https://github.com/renobearcat/cs50/tree/master/pset2>pset2</a>)
+Week 1 
 <br /> 
-C
+C (<a href=https://github.com/renobearcat/cs50/tree/master/pset1>pset1</a>,<a href=https://github.com/renobearcat/cs50/tree/master/pset2>pset2</a>)
 
 Week 2
 Algorithms
