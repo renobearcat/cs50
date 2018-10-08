@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <string.h>
+#include <ctype.h>
+
+// vigenere.c by Erik Koland
+// encrypts text based on a single command line argument with only alphabetical characters to the value of those characters
+
+int main(int argc, string argv[])
+{
+    int characters = 0;
+
+    if (argc != 2)  // ensure only one command line argument
+    {
+        printf("Invalid entry.");
+        return 1;
+    }
+    string k = argv[1];
+    int k_length = strlen(k);
+    int k_index = 0;
+    for (int i = 0; k[i]; i++)
+    {
+        k[i] = toupper(k[i]); // converts command line argument to uppercase
+        if (!isalpha(k[i]))  // rejects command line argument with any non-alphabetical characters
+        {
+            printf("alphabetical characters only.");
+            return 1;
+        }
+    }
+    printf("plaintext:");
+    string ptext = get_string();
+    characters = strlen(ptext);
+    printf("ciphertext:");
+    for (int i = 0; i < characters; i++) //process characters in string one by one
+    {
+        if (isalpha(ptext[i]))
+        {
+            for (i = 0; i < characters; i++) //process characters in string one by one
+            {
+                //adjusts text based on numerical value of the keyword index
+                char adjustment = k[(k_index % k_length)];
+
+                //integer k_index runs independent of integer i
+                if (islower(ptext[i])) //handles lower case
+                {
+                    printf("%c", (ptext[i] - 'a' + (adjustment - 'A')) % 26 + 'a');
+                    k_index++;
+                }
+                else if (isupper(ptext[i])) //handles upper case
+                {
+                    printf("%c", (ptext[i] - 'A' + (adjustment - 'A')) % 26 + 'A');
+                    k_index++;
+                }
+                else
+                {
+                    printf("%c", ptext[i]); //reprint entry if not upper or lower
+                }
+            }
+        }
+    }
+    printf("\n");
+    return 0;
+}
