@@ -15,8 +15,7 @@ https://cs50.edx.org/
 Here's what he did.
 
 
-Week 0Scratch
-<br />  
+Week 0<br /> Scratch 
 
 Week 1 
 <br /> 
