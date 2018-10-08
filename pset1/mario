@@ -1,1 +1,33 @@
-s
+#include <stdio.h>
+#include <cs50.h>
+// mario.c by Erik Koland. Prints a half pyramid with two blocks on top.
+int main(void)
+
+{
+    int height, row, hash, space;
+    printf("Make a mario pyramid from 0 to 23 stories high.\n");
+    //prompt user to enter value between 0 and 23
+    do
+    {
+        height = get_int("How many stories shall we build?: ");
+    }
+    while (height < 0 || height > 23);
+
+    //print a new row, ADDING by one so long as rows are less than the height entered
+    for (row = 0; row < height; row++)
+    {
+        //print 1 fewer spaces in the row than the height provided, REDUCING the number
+        //spaces by one each time until placing 1 space in the next to bottom row
+        for (space = height - row; space >= 2; space--)
+        {
+            printf(" ");
+        }
+        //print 2 hashes to start, ADDING one more so long as hash are less than the number of rows plus 2
+        // e.g stop adding hashes when the number of hashes is one more than number of rows
+        for (hash = 0; hash < row + 2; hash++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
