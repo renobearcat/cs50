@@ -11,44 +11,41 @@ Website
 https://cs50.edx.org/
 
 
-<h3>Lectures</h3>
-The course’s lectures were filmed in Fall 2017 at Harvard University and Yale University.
+<h3>Erik's Problem Sets</h3>
+Here's what he did.
 
-A summary of lectures appears below.
 
-Lecture
-Week 0
-
-Scratch
+Week 0Scratch
+<br />  
 
 Week 1 
 <br /> 
 C (<a href=https://github.com/renobearcat/cs50/tree/master/pset1>pset1</a>,<a href=https://github.com/renobearcat/cs50/tree/master/pset2>pset2</a>)
 
-Week 2
+Week 2<br /> 
 Algorithms
 
-Week 3
+Week 3<br /> 
 Memory
 
-Week 4
+Week 4<br /> 
 Data Structures
 
-Week 5
+Week 5<br /> 
 HTTP
 
-Week 6
+Week 6<br /> 
 Dynamic Programming
 Python
 
-Week 7
+Week 7<br /> 
 Python, continued
 
-Week 8
+Week 8<br /> 
 SQL
 
-Week 9
+Week 9<br /> 
 JavaScript
 
-Week 11
+Week 11<br /> 
 The End
